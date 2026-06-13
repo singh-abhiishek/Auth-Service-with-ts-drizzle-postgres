@@ -7,7 +7,7 @@ import { eq } from 'drizzle-orm'
 
 import { createHmac, randomBytes } from 'node:crypto'
 import { createUserToken } from './utils/token.js'
-
+import type { UserTokenPayload  } from './utils/token.js'
 
 class AuthenticationController {
 
@@ -100,6 +100,22 @@ class AuthenticationController {
                 message: 'signin success',
                 token
             })
+    }
+
+    public async handleMe(req: Request, res: Response){
+
+        // @ts-ignore
+        const { id } = req.user as UserTokenPayload
+
+        const [userResult] = await db.select().from(usersTable).where(eq(usersTable.id, id))
+
+        return res
+                .status(201)
+                .json({
+                    firstName: userResult?.firstName,
+                    lastName: userResult?.lastName,
+                    email: userResult?.email
+                })
     }
 }
 
