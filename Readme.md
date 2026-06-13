@@ -29,3 +29,11 @@
    ```bash
    pnpm add -D tsc-watch
    ```
+
+# Express setup
+
+1. pnpm i express
+
+2. pnpm i @types/express
+
+3. pnpm i @types/node
