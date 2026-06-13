@@ -40,6 +40,8 @@
 
 # Docker set up for postgres
 
+write services inside docker-compose.yml file
+
 1. docker ps -> Shows running containers only
 
 2. docker ps -a -> Shows all containers (running + stopped)
@@ -49,3 +51,13 @@
 4. docker compose up -> to start all services defined in a docker-compose.yml file.
 
 4. docker compose up -d -> to start all services defined in a docker-compose.yml file but in Detached mode (run containers in the background)
+
+
+# Drizzle ORM set up for postgres
+
+postgres_db_url format -> postgresql://username:password@host:port/database_name
+
+just go through Drizzle ORM doc for set up
+https://orm.drizzle.team/docs/get-started/postgresql-new
+
+drizzle kit studio -> Opens Drizzle Studio, a web-based UI to view and manage your database tables and data.
