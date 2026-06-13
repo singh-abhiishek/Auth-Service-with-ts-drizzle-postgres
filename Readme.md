@@ -61,3 +61,7 @@ just go through Drizzle ORM doc for set up
 https://orm.drizzle.team/docs/get-started/postgresql-new
 
 drizzle kit studio -> Opens Drizzle Studio, a web-based UI to view and manage your database tables and data.
+
+# Install zod
+
+pnpm i zod
